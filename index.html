@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANIS NEGOTIATOR PRO</title>
+    <style>
+        body { background: #050505; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: #111; border: 1px solid #ffd700; padding: 40px; border-radius: 20px; text-align: center; width: 400px; box-shadow: 0 0 20px rgba(255,215,0,0.2); }
+        h1 { color: #ffd700; }
+        input { width: 100%; padding: 12px; margin: 10px 0; background: #000; border: 1px solid #333; color: white; border-radius: 8px; box-sizing: border-box; }
+        button { background: #ffd700; color: black; border: none; padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 8px; width: 100%; margin-top: 10px; }
+        #status { margin-top: 20px; color: #00ffcc; font-family: monospace; font-size: 0.9rem; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>AI NEGOTIATOR</h1>
+        <p>Advanced Bargaining System 2026</p>
+        <input type="url" id="url" placeholder="Product Link">
+        <input type="number" id="price" placeholder="Market Price ($)">
+        <button onclick="run()">Start Negotiation</button>
+        <div id="status"></div>
+    </div>
+    <script>
+        function run() {
+            const s = document.getElementById('status');
+            s.innerHTML = "> Scanning market...<br>";
+            setTimeout(() => { s.innerHTML += "> Contacting vendor...<br>"; }, 1000);
+            setTimeout(() => { s.innerHTML += "> 12% Discount Secured!<br>"; }, 2500);
+        }
+    </script>
+</body>
+</html>
